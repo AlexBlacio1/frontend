@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { AutorService } from 'src/app/services/autor.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AutorService } from 'src/app/services/autor.service';
 })
 export class FormComponent {
 
-  constructor(private servicio: AutorService){}
+  constructor(private servicio: AutorService, private ruta: Router){}
 
   nombre:any
   apellido:any
@@ -21,5 +22,7 @@ export class FormComponent {
     this.servicio.postProducto(form.value).subscribe()
 
     console.log(form.value)
+    
+    location.reload()
   }
 }

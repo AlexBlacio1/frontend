@@ -22,5 +22,6 @@ export class TablaComponent {
 
   eliminar(id: any){
     this.servicio.deleteProductos(id).subscribe()
+    location.reload()
   }
 }
