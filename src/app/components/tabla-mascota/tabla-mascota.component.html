@@ -1,0 +1,25 @@
+<table class="min-w-full table-auto text-sm text-left text-gray-500 dark:text-gray-400">
+  <thead class="bg-blue-500 text-white">
+    <tr>
+      <th class="px-6 py-3">ID</th>
+      <th class="px-6 py-3">NOMBRE</th>
+      <th class="px-6 py-3">EDAD</th>
+      <th class="px-6 py-3">ESPECIE</th>
+      <th class="px-6 py-3">RAZA</th>
+      <th class="px-6 py-3">ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data" class="bg-white border-b hover:bg-gray-100">
+      <td class="px-6 py-4">{{item.idMascota}}</td>
+      <td class="px-6 py-4">{{item.nombre}}</td>
+      <td class="px-6 py-4">{{item.edad}}</td>
+      <td class="px-6 py-4">{{item.especie}}</td>
+      <td class="px-6 py-4">{{item.raza}}</td>
+      <td class="px-6 py-4">
+        <a class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition duration-300" href="editar/{{item.idMascota}}">Editar</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300" (click)="eliminar(item.idMascota)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

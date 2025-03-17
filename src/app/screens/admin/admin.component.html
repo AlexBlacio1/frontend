@@ -1,0 +1,26 @@
+<section class="relative bg-blue-500 text-white text-center py-20"
+         th:style="'background-image: url(' + @{/imagenes/veterinaria.jpeg} + '); background-size: cover; background-position: center;'">
+    <h1 class="text-4xl font-bold">Panel de Administración</h1>
+    <p class="mt-4">Gestiona los datos de usuarios y mascotas de forma fácil y rápida</p>
+</section>
+
+
+<section class="container mx-auto py-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Administración de Datos</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full sm:w-80 md:w-96">
+            <h3 class="text-xl font-semibold text-center">Administrar Usuarios</h3>
+            <p class="mt-2 text-center">Gestiona los usuarios registrados en la plataforma.</p>
+            <a href="users" class="block mt-4 text-center text-white bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-lg">Ir a Usuarios</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full sm:w-80 md:w-96">
+            <h3 class="text-xl font-semibold text-center">Administrar Mascotas</h3>
+            <p class="mt-2 text-center">Administra la información de las mascotas registradas.</p>
+            <a href="pets" class="block mt-4 text-center text-white bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-lg">Ir a Mascotas</a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white text-center p-4">
+    <p>&copy; 2025 Veterinaria. Todos los derechos reservados.</p>
+</footer>

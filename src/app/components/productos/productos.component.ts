@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { AutorService } from 'src/app/services/autor.service';
 
 @Component({
@@ -9,17 +9,19 @@ import { AutorService } from 'src/app/services/autor.service';
 })
 export class ProductosComponent {
 
-  constructor(private servicio:AutorService){}
+    constructor(private servicio: AutorService, private ruta: Router){}
 
  
+  id_usuario:any
+  contrasena:any
+  correo:any 
   nombre:any
-  apellido:any
-  id:any
-  email:any
+  rol:any
+  telefono:any
 
   editar(form: any){
 
-    this.servicio.putProductos( form.value, this.id).subscribe()
+    this.servicio.putProductos( form.value, this.id_usuario).subscribe()
 
     
   }

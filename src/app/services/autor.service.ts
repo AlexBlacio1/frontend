@@ -11,27 +11,27 @@ export class AutorService {
   constructor(private http: HttpClient) { }
 
 
-  //private API_AUTOR = "http://localhost:8080/lista/autores2"
-  private API_AUTOR = "http://localhost:3000/autores"
+
+  private API_USUARIO = "http://localhost:8080/usuarios"
 
 
   getProducto():Observable<any>{
-    return this.http.get(this.API_AUTOR)
+    return this.http.get(this.API_USUARIO)
   }
 
   postProducto(producto: any):Observable<any>{
-    return this.http.post(this.API_AUTOR, producto)
+    return this.http.post(this.API_USUARIO, producto)
   }
 
  
-  putProductos( producto: any, id: any): Observable <any>{
-    this.API_AUTOR= `${this.API_AUTOR}/${id}`
-    return this.http.put( this.API_AUTOR, producto)
+  putProductos( producto: any,  id_usuario: any): Observable <any>{
+    this.API_USUARIO= `${this.API_USUARIO}/${ id_usuario}`
+    return this.http.put( this.API_USUARIO, producto)
   }
 
-  deleteProductos(id: any): Observable <any>{
-    this.API_AUTOR= `${this.API_AUTOR}/${id}`
-    return this.http.delete(this.API_AUTOR)
+  deleteProductos( id: any): Observable <any>{
+    this.API_USUARIO= `${this.API_USUARIO}/${id}`
+    return this.http.delete(this.API_USUARIO)
     
   }
 

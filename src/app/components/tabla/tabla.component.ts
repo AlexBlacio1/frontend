@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { AutorService } from 'src/app/services/autor.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-tabla',
   templateUrl: './tabla.component.html',
-  styleUrls: ['./tabla.component.css']
+  styleUrls: ['./tabla.component.css'],
 })
 export class TablaComponent {
 

@@ -5,12 +5,11 @@ import { TablaComponent } from 'src/app/components/tabla/tabla.component';
 import { AutorService } from 'src/app/services/autor.service';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
-  
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class FormComponent {
+export class LoginComponent {
 
   constructor(private servicio: AutorService, private ruta: Router){}
 
@@ -29,3 +28,4 @@ export class FormComponent {
 
   }
 }
+

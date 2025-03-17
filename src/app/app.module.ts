@@ -10,7 +10,16 @@ import { HomeComponent } from './screens/home/home.component';
 import { ProductosComponent } from './components/productos/productos.component';
 
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { MascotaComponent } from './screens/mascota/mascota.component';
+import { FormMascotaComponent } from './components/form-mascota/form-mascota.component';
+import { TablaMascotaComponent } from './components/tabla-mascota/tabla-mascota.component';
+import { LoginComponent } from './screens/login/login.component';
+import { ServiciospageComponent } from './screens/serviciospage/serviciospage.component';
+import { AdminComponent } from './screens/admin/admin.component';
+import { UserlistComponent } from './screens/userlist/userlist.component';
+import { PetslistComponent } from './screens/petslist/petslist.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +28,16 @@ import {HttpClientModule} from '@angular/common/http'
     NavBarComponent,
     TablaComponent,
     HomeComponent,
-    ProductosComponent
+    ProductosComponent,
+    MascotaComponent,
+    FormMascotaComponent,
+    TablaMascotaComponent,
+    LoginComponent,
+    ServiciospageComponent,
+    AdminComponent,
+    UserlistComponent,
+    PetslistComponent
+
   ],
   imports: [
     BrowserModule,

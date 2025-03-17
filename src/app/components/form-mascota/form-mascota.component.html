@@ -1,0 +1,24 @@
+<div class="container" style="width: 50%;">
+    <form (ngSubmit)="cargar(form)" #form="ngForm">
+        Ingrese id:
+        <input type="text" class="form-control" name="id_mascota" [(ngModel)]=id_mascota>
+
+        Ingrese nombre:
+        <input type="text" class="form-control" name="nombre" [(ngModel)]=nombre>
+
+        Ingrese Edad:
+        <input type="text" class="form-control" name="edad" [(ngModel)]=edad>
+
+        Ingrese Especie:
+        <input type="text" class="form-control" name="especie" [(ngModel)]=especie>
+
+        Ingrese raza:
+        <input type="text" class="form-control" name="raza" [(ngModel)]=raza>
+
+
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+  
+</div>
+
+<app-tabla> </app-tabla>

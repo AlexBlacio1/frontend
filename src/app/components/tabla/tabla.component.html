@@ -1,24 +1,25 @@
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-        <th>Acción</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of data">
-        <td>{{item.id}}</td>
-        <td>{{item.nombre}}</td>
-        <td>{{item.apellido}}</td>
-        <td>{{item.email}}</td>
-        <td>
-          <a class="btn btn-warning" href="editar/{{item.id}}">Editar</a> 
-          <button class="btn btn-danger" (click)="eliminar(item.id)">Eliminar</button>
-        </td>
-      </tr>
-      
-    </tbody>
-  </table>
+<table class="table-auto w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <thead class="bg-blue-500 text-white">
+    <tr>
+      <th class="px-6 py-3">ID</th>
+      <th class="px-6 py-3">NOMBRE</th>
+      <th class="px-6 py-3">CORREO</th>
+      <th class="px-6 py-3">ROL</th>
+      <th class="px-6 py-3">TELEFONO</th>
+      <th class="px-6 py-3">ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data" class="bg-white border-b hover:bg-gray-100">
+      <td class="px-6 py-4">{{item.idUsuario}}</td>
+      <td class="px-6 py-4">{{item.nombre}}</td>
+      <td class="px-6 py-4">{{item.correo}}</td>
+      <td class="px-6 py-4">{{item.rol}}</td>
+      <td class="px-6 py-4">{{item.telefono}}</td>
+      <td class="px-6 py-4">
+        <a class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition duration-300" href="editar/{{item.idUsuario}}">Editar</a>
+        <button class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300" (click)="eliminar(item.idUsuario)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
